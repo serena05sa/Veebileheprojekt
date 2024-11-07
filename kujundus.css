@@ -2,27 +2,28 @@ body {
   background-color: #EDEEC0;
   margin: 0;
   font-family: Arial, sans-serif;
+  align-items: center;
 }
 
 nav {
   background-color: #8E9775;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Increase padding to make the nav bar even taller */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem; /* Increase gap to add more space between items */
 }
 
 a {
   position: relative;
   cursor: pointer;
   color: #f4f4f4;
-  font-size: 20px;
+  font-size: 32px; /* Increase font size for larger text */
   font-weight: bold;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 1.5rem 2rem; /* Increase padding for a larger clickable area */
+  border-radius: 10px;
   transition: color 0.25s, background-color 0.25s;
 }
 
@@ -34,7 +35,7 @@ a::after {
   scale: 1 0;
   z-index: -1;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 a:hover {
@@ -44,10 +45,4 @@ a:hover {
 
 a:hover::after {
   scale: 1 1;
-}
-
-h1 {
-  color: #433E0E;
-  text-align: center;
-  margin-top: 2rem;
 }
