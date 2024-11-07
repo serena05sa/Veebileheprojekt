@@ -52,28 +52,42 @@ h1 {
   margin-top: 2rem;
 }
 
+
+
+
+
 /*sorteerimise kujundus*/
 
-.container {
+  /*konteiner, kus sees kõik elemendid*/
+.card-container {
   overflow: hidden;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
+  /*filtreeritavad elemendid, vist*/
 .filterDiv {
   float: top;
   width: 200px;
   line-height: 5px;
   text-align: top;
+  background-color: #F3E8EE;
+  border-radius: 8px;
   display: none; /* Hidden by default */
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 10px 10px 5px #BACDB0;
 }
 
+/*pildid*/
 img{
   width: 200px;
   height: 100px;
-  padding-top: 20px;
 }
 
+  /*pealkirjad eventide all*/
 .pealkiri{
   color: #433E0E;
   padding: 0px;
@@ -81,29 +95,45 @@ img{
   text-align: center;
 }
 
-/* The "show" class is added to the filtered elements */
+/* midagimidagi filtreerimine */
 .show {
   display: block;
 }
 
-/* Style the buttons */
+/* filtreerimis nuppude disain */
 .btn {
   border: none;
   outline: none;
   padding: 12px 16px;
-  background-color: #f1f1f1;
+  background-color: #F3E8EE;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-/* Add a light grey background on mouse-over */
+/* kui hoverid nupu kohal */
 .btn:hover {
-  background-color: #ddd;
+  background-color: #ead6e0;
 }
 
-/* Add a dark background to the active button */
-.btn.active {
-  background-color: #666;
+/* vajutamisel nupp tumedam */
+.btn:active {
+  background-color: #475B63;
   color: white;
 }
 
+#myBtnContainer{
+  background-color: #8E9775;
+  padding: 10px;
 
+}
+
+#urituse_nupp{
+  width: 220px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
+
+#urituse_nupp:hover{
+  background-color: #ead6e0;
+}
