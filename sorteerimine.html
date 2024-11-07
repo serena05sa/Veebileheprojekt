@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="kujundus.css">
+    <script src="sorteerimine.js"></script>
     <head>
-        <title>Veebileht</title>
+        <title>Üritused</title>
     </head>
     <body>
+        <!--navigatsiooni riba-->
         <nav>
             <a href="avaleht.html">Avaleht</a>
             <a href="sorteerimine.html">Sorteerimine</a>
@@ -12,6 +14,25 @@
             <a href="küsimustik.html">Küsimustik</a>
         </nav>
         <h1>Ürituste otsing</h1>
+
+        <!-- Nupud filtreerimiseks -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('koik')">Kõik</button>
+            <button class="btn" onclick="filterSelection('tasuta')">Tasuta</button>
+            <button class="btn" onclick="filterSelection('baarid')">Baarid</button>
+            <button class="btn" onclick="filterSelection('mangud')">Mängud</button>
+            <button class="btn" onclick="filterSelection('kultuur')">Kultuur</button>
+        </div>
+  
+        <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+        <div class="container">
+            <div class="filterDiv tasuta baarid mangud">Möku bingo</div>
+            <div class="filterDiv ckultuur">Eesti Rahva muuseum</div>
+            <div class="filterDiv tasuta baarid mangud">Püssika maleturniir</div>
+            
+        </div>
+
+
 
     </body>
 </html>
