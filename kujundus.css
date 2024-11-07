@@ -10,8 +10,31 @@ li {
     float: left;
   }
   
-  a {
-    display: block;
-    padding: 8px;
-    background-color: #dddddd;
+a {
+    position: relative;
+    cursor: pointer;
+    color: #2e2c2f;
+    font-size: 28px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
   }
+
+a::after{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: white;
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+  border-radius: 10px;
+}
+
+a:hover{
+  color: black;
+}
+
+a:hover::after {
+  scale: 1 1;
+
+}
