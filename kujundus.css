@@ -73,12 +73,8 @@ h1 {
   width: 200px;
   line-height: 5px;
   text-align: top;
-  background-color: #F3E8EE;
-  border-radius: 8px;
-  display: none; /* Hidden by default */
-  padding: 10px;
-  margin: 10px;
-  box-shadow: 10px 10px 5px #BACDB0;
+  display: none; /* by default ei ole üritust näha */
+  
 }
 
 /*pildid*/
@@ -132,8 +128,14 @@ img{
   padding: 10px;
   margin: 10px;
   border: none;
+  background-color: #F3E8EE;
+  box-shadow: 10px 10px 5px #BACDB0;
+  border-radius: 8px;
 }
 
 #urituse_nupp:hover{
   background-color: #ead6e0;
+  
 }
+
+
