@@ -53,19 +53,32 @@ h1 {
 }
 
 /*sorteerimise kujundus*/
+
 .container {
   overflow: hidden;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .filterDiv {
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
+  float: top;
+  width: 200px;
+  line-height: 5px;
+  text-align: top;
   display: none; /* Hidden by default */
+}
+
+img{
+  width: 200px;
+  height: 100px;
+  padding-top: 20px;
+}
+
+.pealkiri{
+  color: #433E0E;
+  padding: 0px;
+  size: 5px;
+  text-align: center;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -92,3 +105,5 @@ h1 {
   background-color: #666;
   color: white;
 }
+
+
