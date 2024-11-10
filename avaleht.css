@@ -4,31 +4,31 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar Styles */
+/* Navigation bar */
 nav {
   background-color: #8E9775;
-  padding: 2rem; /* Increase padding to make the nav bar taller */
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  gap: 3rem; /* Increase gap to add more space between items */
-  position: fixed; /* Keep the navbar fixed at the top of the page */
+  gap: 3rem;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Ensure navbar is above other content */
+  z-index: 10; 
 }
 
-/* Link styles in Navbar */
+/* Lingi stiilid */
 a {
   position: relative;
   cursor: pointer;
   color: #f4f4f4;
-  font-size: 32px; /* Increase font size for larger text */
+  font-size: 32px; 
   font-weight: bold;
   text-decoration: none;
-  padding: 1.5rem 2rem; /* Increase padding for a larger clickable area */
+  padding: 1.5rem 2rem;
   border-radius: 10px;
   transition: color 0.25s, background-color 0.25s;
 }
@@ -53,13 +53,13 @@ a:hover::after {
   scale: 1 1;
 }
 
-/* Text Section Styling */
+/* Teksti kujundus */
 .text-section {
-  padding-left: 20px; /* Ensure some padding from the left edge */
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  margin-top: 100px; /* Add top margin to avoid overlapping the navbar */
+  align-items: flex-start;
+  margin-top: 100px;
 }
 
 /* Tartu tekst */
@@ -122,10 +122,10 @@ section {
 }
 
 h2 {
-  font-size: 2.5rem; /* Adjust size as needed */
+  font-size: 2.5rem; 
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem; /* Space below the h2 */
-  color: #333; /* Change to the color you want */
-  letter-spacing: 2px; /* Adjust letter spacing */
+  margin-bottom: 1rem;
+  color: #333;
+  letter-spacing: 2px;
 }
