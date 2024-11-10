@@ -52,7 +52,6 @@ a:hover {
 a:hover::after {
   scale: 1 1;
 }
-
 /* Text Section Styling */
 .text-section {
   padding-left: 20px; /* Ensure some padding from the left edge */
@@ -62,10 +61,8 @@ a:hover::after {
   margin-top: 100px; /* Add top margin to avoid overlapping the navbar */
 }
 
-/* Tartu tekst */
 .paint-order {
   paint-order: stroke fill;
-  padding-top: 100px;
   text-transform: uppercase;
   font-size: calc(1rem + min(90px, 15vw));
   font-weight: 900;
@@ -74,11 +71,10 @@ a:hover::after {
   color: white;
   -webkit-text-stroke: 5px black;
   text-shadow: 8px 8px black;
-  letter-spacing: 0.1ch;
 }
 
 .paint-order > span:first-of-type {
-  font-size: .0.75em;
+  font-size: .75em;
 }
 
 .paint-order > div {
@@ -86,7 +82,7 @@ a:hover::after {
   gap: .5ch;
 }
 
-/* Tartu pilt */
+/* Image Section Styling */
 .image-section img {
   position: absolute;
   height: 60%;
@@ -110,22 +106,97 @@ body {
 
 section {
   display: grid;
+  place-items: center;
   gap: 2vmin;
 }
 
-/* Tekst pealehel */
- .info-section {
-  font-size: 30px;
-  padding-top: 100px;
-  padding-left: px;
-  text-align: left;
+section > p {
+  border: 2px solid #aaa;
+  border-radius: 1e3px;
+  padding-inline: 1.5ch;
+  line-height: 1.75;
 }
+/*sorteerimise kujundus*/
 
-h2 {
-  font-size: 2.5rem; /* Adjust size as needed */
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1rem; /* Space below the h2 */
-  color: #333; /* Change to the color you want */
-  letter-spacing: 2px; /* Adjust letter spacing */
-}
+  /*konteiner, kus sees kõik elemendid*/
+  .card-container {
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+    /*filtreeritavad elemendid, vist*/
+  .filterDiv {
+    float: top;
+    width: 200px;
+    line-height: 5px;
+    text-align: top;
+    display: none; /* by default ei ole üritust näha */
+    
+  }
+  
+  /*pildid*/
+  img{
+    width: 200px;
+    height: 100px;
+  }
+  
+    /*pealkirjad eventide all*/
+  .pealkiri{
+    color: #433E0E;
+    padding: 0px;
+    size: 5px;
+    text-align: center;
+  }
+  
+  /* midagimidagi filtreerimine */
+  .show {
+    display: block;
+  }
+  
+  /* filtreerimis nuppude disain */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #F3E8EE;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* kui hoverid nupu kohal */
+  .btn:hover {
+    background-color: #ead6e0;
+  }
+  
+  /* vajutamisel nupp tumedam */
+  .btn:active {
+    background-color: #475B63;
+    color: white;
+  }
+  
+  #myBtnContainer{
+    background-color: #8E9775;
+    padding: 5px;
+    line-height: 45px;
+  
+  }
+  
+  #urituse_nupp{
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #F3E8EE;
+    box-shadow: 10px 10px 5px #BACDB0;
+    border-radius: 8px;
+  }
+  
+  #urituse_nupp:hover{
+    background-color: #ead6e0;
+    transform: scale(1.15);
+  
+    
+  }
