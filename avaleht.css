@@ -1,0 +1,131 @@
+body {
+  background-color: #EDEEC0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #8E9775;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; 
+}
+
+/* Lingi stiilid */
+a {
+  position: relative;
+  cursor: pointer;
+  color: #f4f4f4;
+  font-size: 32px; 
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  transition: color 0.25s, background-color 0.25s;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #3C6E71;
+  scale: 1 0;
+  z-index: -1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 10px;
+}
+
+a:hover {
+  color: #FFF;
+  background-color: #3C6E71;
+}
+
+a:hover::after {
+  scale: 1 1;
+}
+
+/* Teksti kujundus */
+.text-section {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+/* Tartu tekst */
+.paint-order {
+  paint-order: stroke fill;
+  padding-top: 100px;
+  text-transform: uppercase;
+  font-size: calc(1rem + min(90px, 15vw));
+  font-weight: 900;
+  letter-spacing: -.175ch;
+  line-height: 0.9;
+  color: white;
+  -webkit-text-stroke: 5px black;
+  text-shadow: 8px 8px black;
+  letter-spacing: 0.1ch;
+}
+
+.paint-order > span:first-of-type {
+  font-size: .0.75em;
+}
+
+.paint-order > div {
+  display: flex;
+  gap: .5ch;
+}
+
+/* Tartu pilt */
+.image-section img {
+  position: absolute;
+  height: 60%;
+  bottom: -4px;
+  right: -8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+section {
+  display: grid;
+  gap: 2vmin;
+}
+
+/* Tekst pealehel */
+ .info-section {
+  font-size: 30px;
+  padding-top: 100px;
+  padding-left: px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #333;
+  letter-spacing: 2px;
+}
