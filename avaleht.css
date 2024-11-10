@@ -31,7 +31,6 @@ a::after {
   content: "";
   inset: 0;
   background-color: #3C6E71;
-  scale: 1 0;
   z-index: -1;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 8px;
@@ -40,10 +39,6 @@ a::after {
 a:hover {
   color: #FFF;
   background-color: #3C6E71;
-}
-
-a:hover::after {
-  scale: 1 1;
 }
 
 /* Teksti kujundus */
@@ -57,7 +52,6 @@ a:hover::after {
 
 /* Tartu tekst */
 .paint-order {
-  paint-order: stroke fill;
   padding-top: 1px; /* Väiksem padding */
   text-transform: uppercase;
   font-size: calc(1rem + min(60px, 10vw)); /* Väiksem ja kohanduv suurus */
