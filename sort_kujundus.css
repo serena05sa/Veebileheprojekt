@@ -32,7 +32,6 @@ body {
     content: "";
     inset: 0;
     background-color: #3C6E71;
-    scale: 1 0;
     z-index: -1;
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     border-radius: 8px;
@@ -43,9 +42,7 @@ body {
     background-color: #3C6E71;
   }
   
-  a:hover::after {
-    scale: 1 1;
-  }
+  
   
   h1 {
     color: #433E0E;
@@ -67,10 +64,8 @@ body {
   
     /*filtreeritavad elemendid, vist*/
   .filterDiv {
-    float: top;
     width: 200px;
     line-height: 5px;
-    text-align: top;
     display: none; /* by default ei ole üritust näha */
     
   }
@@ -85,7 +80,6 @@ body {
   .pealkiri{
     color: #433E0E;
     padding: 0px;
-    size: 5px;
     text-align: center;
   }
   

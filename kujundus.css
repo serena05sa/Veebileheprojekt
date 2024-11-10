@@ -187,6 +187,7 @@ img{
   
 }
 
+<<<<<<< HEAD
 /* Text Section Styling */
 .text-section {
   padding-left: 20px; /* Ensure some padding from the left edge */
@@ -250,4 +251,68 @@ section > p {
   border-radius: 1e3px;
   padding-inline: 1.5ch;
   line-height: 1.75;
+=======
+/*pupup window - vbl kui ma hakkama saan*/
+
+/*midagi midagi nupud*/
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	pointer-events: none;
+}
+
+/*taust tumedamaks*/
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+/*see aken*/
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+#nupp{
+  width: 220px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #EDEEC0;
+}
+
+#nupp:hover{
+  background-color: #EDEEC0;
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
 }

@@ -4,7 +4,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 nav {
+=======
+ /*nav bar*/
+ nav {
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
   background-color: #8E9775;
   padding: 1rem;
   border-radius: 10px;
@@ -31,6 +36,10 @@ a::after {
   content: "";
   inset: 0;
   background-color: #3C6E71;
+<<<<<<< HEAD
+=======
+  transform: scale(1, 0);
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
   z-index: -1;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 8px;
@@ -41,6 +50,13 @@ a:hover {
   background-color: #3C6E71;
 }
 
+<<<<<<< HEAD
+=======
+a:hover::after {
+  transform: scale(1, 1);
+}
+
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
 /* Teksti kujundus */
 .text-section {
   padding-left: 10px; /* Väiksem padding */
@@ -52,7 +68,12 @@ a:hover {
 
 /* Tartu tekst */
 .paint-order {
+<<<<<<< HEAD
   padding-top: 1px; /* Väiksem padding */
+=======
+  paint-order: stroke fill markers;
+  padding-top: 100px;
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
   text-transform: uppercase;
   font-size: calc(1rem + min(60px, 10vw)); /* Väiksem ja kohanduv suurus */
   font-weight: 900;
@@ -87,9 +108,15 @@ section {
 }
 
 /* Tekst pealehel */
+<<<<<<< HEAD
 .info-section {
   font-size: 24px; /* Väiksem font */
   padding-top: 50px; /* Väiksem padding */
+=======
+ .info-section {
+  font-size: 30px;
+  padding-top: 100px;
+>>>>>>> 719adc2a2d552893dbf3d5f7cf0a0f4cf32241c9
   text-align: left;
 }
 
