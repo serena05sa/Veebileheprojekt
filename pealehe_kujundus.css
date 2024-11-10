@@ -1,0 +1,131 @@
+body {
+  background-color: #EDEEC0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #8E9775;
+  padding: 2rem; /* Increase padding to make the nav bar taller */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Increase gap to add more space between items */
+  position: fixed; /* Keep the navbar fixed at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure navbar is above other content */
+}
+
+/* Link styles in Navbar */
+a {
+  position: relative;
+  cursor: pointer;
+  color: #f4f4f4;
+  font-size: 32px; /* Increase font size for larger text */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1.5rem 2rem; /* Increase padding for a larger clickable area */
+  border-radius: 10px;
+  transition: color 0.25s, background-color 0.25s;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #3C6E71;
+  scale: 1 0;
+  z-index: -1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 10px;
+}
+
+a:hover {
+  color: #FFF;
+  background-color: #3C6E71;
+}
+
+a:hover::after {
+  scale: 1 1;
+}
+
+/* Text Section Styling */
+.text-section {
+  padding-left: 20px; /* Ensure some padding from the left edge */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  margin-top: 100px; /* Add top margin to avoid overlapping the navbar */
+}
+
+/* Tartu tekst */
+.paint-order {
+  paint-order: stroke fill;
+  padding-top: 100px;
+  text-transform: uppercase;
+  font-size: calc(1rem + min(90px, 15vw));
+  font-weight: 900;
+  letter-spacing: -.175ch;
+  line-height: 0.9;
+  color: white;
+  -webkit-text-stroke: 5px black;
+  text-shadow: 8px 8px black;
+  letter-spacing: 0.1ch;
+}
+
+.paint-order > span:first-of-type {
+  font-size: .0.75em;
+}
+
+.paint-order > div {
+  display: flex;
+  gap: .5ch;
+}
+
+/* Tartu pilt */
+.image-section img {
+  position: absolute;
+  height: 60%;
+  bottom: -4px;
+  right: -8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+section {
+  display: grid;
+  gap: 2vmin;
+}
+
+/* Tekst pealehel */
+ .info-section {
+  font-size: 30px;
+  padding-top: 100px;
+  padding-left: px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem; /* Space below the h2 */
+  color: #333; /* Change to the color you want */
+  letter-spacing: 2px; /* Adjust letter spacing */
+}
