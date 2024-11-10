@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="et">
+    <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="sort_kujundus.css">
     <script src="sorteerimine.js"></script>
-    <head>
         <title>Üritused</title>
     </head>
     <body>
         <body onload="avane()">
         <!--navigatsiooni riba-->
+    
         <nav>
             <a href="avaleht.html">Avaleht</a>
             <a href="sorteerimine.html">Sorteerimine</a>
@@ -31,14 +33,27 @@
 
         
 
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Modal Box</h2>
+                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+            </div>
+        </div>
+
+        
+
         <!-- Elemendid -->
-        <div class="card-container"> 
-            <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
-                <img src="img/moku.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Möku bingo</h3>
-                </div> 
-            </button>
+        <div class="card-container">
+            <a id ="nupp" href="#openModal">
+                <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
+                    <img src="img/moku.jpg" alt="sündmus">
+                    <div class="sisu">
+                        <h3 class="pealkiri">Möku bingo</h3>
+                    </div> 
+                </button>
+            </a>
 
             <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
                 <img src="img/male.jpg" alt="sündmus">
