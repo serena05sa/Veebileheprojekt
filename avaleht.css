@@ -4,32 +4,26 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Navigation bar */
-nav {
+ /*nav bar*/
+ nav {
   background-color: #8E9775;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10; 
+  gap: 1rem;
 }
 
-/* Lingi stiilid */
 a {
   position: relative;
   cursor: pointer;
   color: #f4f4f4;
-  font-size: 32px; 
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   transition: color 0.25s, background-color 0.25s;
 }
 
@@ -41,7 +35,7 @@ a::after {
   scale: 1 0;
   z-index: -1;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 a:hover {
