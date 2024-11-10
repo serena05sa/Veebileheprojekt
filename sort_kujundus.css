@@ -1,0 +1,142 @@
+body {
+    background-color: #EDEEC0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /*nav bar*/
+  nav {
+    background-color: #8E9775;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  a {
+    position: relative;
+    cursor: pointer;
+    color: #f4f4f4;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: color 0.25s, background-color 0.25s;
+  }
+  
+  a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: #3C6E71;
+    scale: 1 0;
+    z-index: -1;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border-radius: 8px;
+  }
+  
+  a:hover {
+    color: #FFF;
+    background-color: #3C6E71;
+  }
+  
+  a:hover::after {
+    scale: 1 1;
+  }
+  
+  h1 {
+    color: #433E0E;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  
+  /*sorteerimise kujundus*/
+  
+    /*konteiner, kus sees kõik elemendid*/
+  .card-container {
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+    /*filtreeritavad elemendid, vist*/
+  .filterDiv {
+    float: top;
+    width: 200px;
+    line-height: 5px;
+    text-align: top;
+    display: none; /* by default ei ole üritust näha */
+    
+  }
+  
+  /*pildid*/
+  img{
+    width: 200px;
+    height: 100px;
+  }
+  
+    /*pealkirjad eventide all*/
+  .pealkiri{
+    color: #433E0E;
+    padding: 0px;
+    size: 5px;
+    text-align: center;
+  }
+  
+  /* midagimidagi filtreerimine */
+  .show {
+    display: block;
+  }
+  
+  /* filtreerimis nuppude disain */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #F3E8EE;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* kui hoverid nupu kohal */
+  .btn:hover {
+    background-color: #ead6e0;
+  }
+  
+  /* vajutamisel nupp tumedam */
+  .btn:active {
+    background-color: #475B63;
+    color: white;
+  }
+  
+  #myBtnContainer{
+    background-color: #8E9775;
+    padding: 5px;
+    line-height: 45px;
+  
+  }
+  
+  #urituse_nupp{
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #F3E8EE;
+    box-shadow: 10px 10px 5px #BACDB0;
+    border-radius: 8px;
+  }
+  
+  #urituse_nupp:hover{
+    background-color: #ead6e0;
+    transform: scale(1.15);
+  
+    
+  }
+  
+  
