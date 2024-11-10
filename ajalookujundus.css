@@ -31,7 +31,7 @@ body {
     content: "";
     inset: 0;
     background-color: #3C6E71;
-    scale: 1 0;
+    transform: scale(1, 0);
     z-index: -1;
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     border-radius: 8px;
@@ -43,7 +43,7 @@ body {
   }
   
   a:hover::after {
-    scale: 1 1;
+    transform: scale(1, 1);
   }
   
   h1 {
