@@ -20,6 +20,7 @@
 
         
         <!-- Nupud filtreerimiseks -->
+        <!-- kood: https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
         <div id="myBtnContainer">
             <button class="btn active" onclick="filterSelection('koik')">Kõik</button>
             <button class="btn" onclick="filterSelection('tasuta')">Tasuta</button>
@@ -31,29 +32,20 @@
             <button class="btn" onclick="filterSelection('aktiivne')">Aktiivne</button>
         </div>
 
-        
-
-        <div id="openModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-                <h2>Modal Box</h2>
-                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-            </div>
-        </div>
 
         
 
         <!-- Elemendid -->
+        <!-- abiks: https://www.youtube.com/watch?v=yjfjQVawwnA -->
+         
         <div class="card-container">
-            <a id ="nupp" href="#openModal">
-                <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
-                    <img src="img/moku.jpg" alt="sündmus">
-                    <div class="sisu">
-                        <h3 class="pealkiri">Möku bingo</h3>
-                    </div> 
-                </button>
-            </a>
+
+            <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
+                <img src="img/moku.jpg" alt="sündmus">
+                <div class="sisu">
+                    <h3 class="pealkiri">Möku bingo</h3>
+                </div> 
+            </button>
 
             <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
                 <img src="img/male.jpg" alt="sündmus">
