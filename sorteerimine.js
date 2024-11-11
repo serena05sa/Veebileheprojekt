@@ -52,3 +52,22 @@ function avane() {
   filterSelection("koik");
 };
 
+
+// popup akna avamine
+function openModal(title, description) {
+  const eventModal = document.getElementById("eventModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+
+  modalTitle.innerText = title;
+  modalDescription.innerText = description;
+
+  eventModal.style.display = "block";
+}
+
+// popup akna sulgemine
+function closeModal() {
+  const eventModal = document.getElementById("eventModal");
+  eventModal.style.display = "none";
+}
+
