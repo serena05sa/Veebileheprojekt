@@ -1,11 +1,19 @@
+/*taust*/
 body {
     background-color: #EDEEC0;
     margin: 0;
     font-family: Arial, sans-serif;
   }
 
-  /*nav bar*/
-  nav {
+h1 {
+    color: #433E0E;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+
+/*nav bar*/
+nav {
     background-color: #8E9775;
     padding: 1rem;
     border-radius: 10px;
@@ -41,51 +49,18 @@ body {
     color: #FFF;
     background-color: #3C6E71;
   }
+
   
-  
-  
-  h1 {
-    color: #433E0E;
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  
-  /*sorteerimise kujundus*/
-  
-    /*konteiner, kus sees kõik elemendid*/
-  .card-container {
-    overflow: hidden;
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-  }
-  
-    /*filtreeritavad elemendid, vist*/
-  .filterDiv {
-    width: 200px;
-    line-height: 5px;
-    display: none; /* by default ei ole üritust näha */
-    
-  }
-  
-  /*pildid*/
-  img{
-    width: 200px;
-    height: 100px;
-  }
-  
-    /*pealkirjad eventide all*/
-  .pealkiri{
-    color: #433E0E;
-    padding: 0px;
-    text-align: center;
-  }
-  
-  /* midagimidagi filtreerimine */
-  .show {
-    display: block;
+      /*sorteerimise alamlehe kujundus*/
+
+
+/*filtreerimine*/
+
+   /*see, kus filtri nupud sees*/
+   #myBtnContainer{
+    background-color: #8E9775;
+    padding: 5px;
+    line-height: 45px;
   }
   
   /* filtreerimis nuppude disain */
@@ -98,7 +73,7 @@ body {
     border-radius: 4px;
   }
   
-  /* kui hoverid nupu kohal */
+  /* kui hoverid filtreerimis nupu kohal */
   .btn:hover {
     background-color: #ead6e0;
   }
@@ -108,14 +83,46 @@ body {
     background-color: #475B63;
     color: white;
   }
-  
-  #myBtnContainer{
-    background-color: #8E9775;
-    padding: 5px;
-    line-height: 45px;
-  
+
+
+/*üritused*/
+
+/*see, kus nad kõik sees ilusti*/
+  .card-container {
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
   }
   
+  /*filtreeritavad elemendid*/
+  /*inspiratsioon: https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
+  .filterDiv {
+    width: 200px;
+    line-height: 5px;
+    display: none; /* by default ei ole üritust näha */
+  }
+  
+  /*pildid*/
+  img{
+    width: 200px;
+    height: 100px;
+  }
+  
+  /*pealkirjad eventide all*/
+  .pealkiri{
+    color: #433E0E;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  /* midagimidagi filtreerimine */
+  .show {
+    display: block;
+  }
+
+  /**/
   #urituse_nupp{
     width: 220px;
     padding: 10px;
@@ -129,8 +136,7 @@ body {
   #urituse_nupp:hover{
     background-color: #ead6e0;
     transform: scale(1.15);
-  
-    
+
   }
   
   
