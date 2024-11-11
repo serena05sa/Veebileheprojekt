@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/*https://vm.tiktok.com/ZNecWNPfy/*/
 nav {
   background-color: #8E9775;
   padding: 1rem;
@@ -48,19 +49,20 @@ a:hover::after {
 
 /* Teksti kujundus */
 .text-section {
-  padding-left: 10px; /* Väiksem padding */
+  padding-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px; /* Väiksem margin */
+  margin-top: 20px;
 }
 
 /* Tartu tekst */
+/*https://codepen.io/argyleink/pen/MWoeoKV*/
 .paint-order {
   paint-order: stroke fill markers;
   padding-top: 1px;
   text-transform: uppercase;
-  font-size: calc(1rem + min(60px, 10vw)); /* Väiksem ja kohanduv suurus */
+  font-size: calc(1rem + min(60px, 10vw));
   font-weight: 900;
   letter-spacing: -.175ch;
   line-height: 0.9;
