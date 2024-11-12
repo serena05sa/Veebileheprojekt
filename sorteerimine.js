@@ -1,16 +1,22 @@
 // kood pärit: https://www.w3schools.com/howto/howto_js_filter_elements.asp
 
-filterSelection("koik")
+/*https://stackoverflow.com/questions/60444920/im-getting-many-errors-like-expected-use-strict-at-column-4-not-column-2 ütles, et järgmine rida on oluline*/
+/*jslint devel: true, browser: true, white: true */
+
 function filterSelection(c) {
+  "use strict";
   var x, i;
   x = document.getElementsByClassName("filterDiv");
-  if (c == "koik") c = "";
+  if (c === "koik") c = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
 }
+
+filterSelection("koik")
+
 
 // Show filtered elements
 function w3AddClass(element, name) {
@@ -47,11 +53,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-function avane() {
-  filterSelection("koik");
-};
-
 
 // popup akna avamine
 function openModal(title, description) {

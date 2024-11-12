@@ -105,46 +105,47 @@ nav {
   /*filtreeritavad elemendid*/
   /*inspiratsioon: https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
   .filterDiv {
-    width: 200px;
     line-height: 5px;
     display: none; /* by default ei ole üritust näha */
+    width: 220px;
+    margin: 10px; /*et nuppudel oleks vahe*/
+    border: none;
+    background-color: #F3E8EE;
+    box-shadow: 10px 10px 5px #BACDB0;
+    border-radius: 8px;
+  }
+
+  .filterDiv:hover{
+    background-color: #ead6e0;
+    transform: scale(1.15);
+  }
+
+  /* midagimidagi filtreerimine */
+  .show {
+    display: block;
   }
   
   /*pildid*/
   img{
     width: 200px;
     height: 100px;
+    margin-bottom: 5px;
+    padding-top: 5px;
   }
   
   /*pealkirjad eventide all*/
   .pealkiri{
     color: #433E0E;
     padding: 0px;
-    text-align: center;
+    text-align: center; 
     line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
   }
   
-  /* midagimidagi filtreerimine */
-  .show {
-    display: block;
-  }
 
-  /**/
-  #urituse_nupp{
-    width: 220px;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    background-color: #F3E8EE;
-    box-shadow: 10px 10px 5px #BACDB0;
-    border-radius: 8px;
-  }
   
-  #urituse_nupp:hover{
-    background-color: #ead6e0;
-    transform: scale(1.15);
-
-  }
+ 
   
   /* Modal stiilid */
 #eventModal {
