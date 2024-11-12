@@ -6,7 +6,6 @@
         <title>Üritused</title>
     </head>
     <body>
-        <body onload="avane()">
         <!--navigatsiooni riba-->
     
         <nav>
@@ -38,130 +37,94 @@
         <!-- abiks: https://www.youtube.com/watch?v=yjfjQVawwnA -->
         <div class="card-container">
 
-            <button id="urituse_nupp" class="filterDiv tasuta baarid mangud" onclick="openModal('Möku bingo', 'info')">
+            <button class="filterDiv tasuta baarid mangud" onclick="openModal('Möku bingo', 'info')">
                 <img src="img/moku.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Möku bingo</h3>
-                </div> 
+                <span class="pealkiri">Möku bingo</span> 
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud" onclick="openModal('Püssika maleturniir', 'info')">
+            <button class="filterDiv tasuta baarid mangud" onclick="openModal('Püssika maleturniir', 'info')">
                 <img src="img/male.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Püssika maleturniir</h3>
-                </div>
+                <span class="pealkiri">Püssika maleturniir</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv kultuur" onclick="openModal('Eesti Rahva Muuseum', 'info')">
+            <button class="filterDiv kultuur" onclick="openModal('Eesti Rahva Muuseum', 'info')">
                 <img src="img/erm.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Eesti Rahva Muuseum</h3>
-                </div>
+                <span class="pealkiri">Eesti Rahva Muuseum</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta baarid" onclick="openModal('Seik karaoke', 'info')">
+            <button class="filterDiv tasuta baarid" onclick="openModal('Seik karaoke', 'info')">
                 <img src="img/seik.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Seik karaoke</h3>
-                </div> 
+                <span class="pealkiri">Seik karaoke</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne" onclick="openModal('Tantsuõhtud', 'info')">
+            <button class="filterDiv tasuta aktiivne" onclick="openModal('Tantsuõhtud', 'info')">
                 <img src="img/tants.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tantsuõhtud</h3>
-                </div>
+                <span class="pealkiri">Tantsuõhtud</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta loodus" onclick="openModal('Botaanika aed', 'info')">
+            <button class="filterDiv tasuta loodus" onclick="openModal('Botaanika aed', 'info')">
                 <img src="img/botaed.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Botaanika aed</h3>
-                </div>
+                <span class="pealkiri">Botaanika aed</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud" onclick="openModal('Lucy Loore', 'info')">
+            <button class="filterDiv baarid mangud" onclick="openModal('Lucy Loore', 'info')">
                 <img src="img/lucky.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Lucy Loore</h3>
-                </div>
+                <span class="pealkiri">Lucy Loore</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne" onclick="openModal('Supilinna külakiik', 'info')">
+            <button class="filterDiv tasuta 247 aktiivne" onclick="openModal('Supilinna külakiik', 'info')">
                 <img src="img/kiik.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Supilinna külakiik</h3>
-                </div>
+                <span class="pealkiri">Supilinna külakiik</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne" onclick="openModal('Emajõe rand', 'info')">
+            <button class="filterDiv tasuta 247 aktiivne" onclick="openModal('Emajõe rand', 'info')">
                 <img src="img/rand.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Emajõe rand</h3>
-                </div>
+                <span class="pealkiri">Emajõe rand</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv loodus" onclick="openModal('Tartu loodusmaja', 'info')">
+            <button class="filterDiv loodus" onclick="openModal('Tartu loodusmaja', 'info')">
                 <img src="img/loodusmaja.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tartu loodusmaja</h3>
-                </div>
+                <span class="pealkiri">Tartu loodusmaja</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud"  onclick="openModal('O´Learys', 'info')">
+            <button class="filterDiv baarid mangud"  onclick="openModal('O´Learys', 'info')">
                 <img src="img/olearys.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">O'Learys</h3>
-                </div>
+                <span class="pealkiri">O'Learys</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud"  onclick="openModal('Baribal', 'info')">
+            <button class="filterDiv baarid mangud"  onclick="openModal('Baribal', 'info')">
                 <img src="img/baribal.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Baribal</h3>
-                </div>
+                <span class="pealkiri">Baribal</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta loodus"  onclick="openModal('Toomemäe park', 'info')">
+            <button class="filterDiv tasuta loodus"  onclick="openModal('Toomemäe park', 'info')">
                 <img src="img/toomemagi.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Toomemäe park</h3>
-                </div>
+                <span class="pealkiri">Toomemäe park</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta paarid"  onclick="openModal('Emajõe promenaad', 'info')">
+            <button class="filterDiv tasuta paarid"  onclick="openModal('Emajõe promenaad', 'info')">
                 <img src="img/promenaad.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Emajõe promenaad</h3>
-                </div>
+                <span class="pealkiri">Emajõe promenaad</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne"  onclick="openModal('Raekoja uisuplats', 'info')">
+            <button class="filterDiv tasuta aktiivne"  onclick="openModal('Raekoja uisuplats', 'info')">
                 <img src="img/raekoda.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Raekoja uisuplats</h3>
-                </div>
+                <span class="pealkiri">Raekoja uisuplats</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne"  onclick="openModal('Tamme staadioni uisuväljak', 'info')">
+            <button class="filterDiv tasuta aktiivne"  onclick="openModal('Tamme staadioni uisuväljak', 'info')">
                 <img src="img/tammeuisuvaljak.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tamme staadioni uisuväljak</h3>
-                </div>
+                <span class="pealkiri">Tamme staadioni uisuväljak</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv aktiivne"  onclick="openModal('Tartu Seikluspark', 'info')">
+            <button class="filterDiv aktiivne"  onclick="openModal('Tartu Seikluspark', 'info')">
                 <img src="img/seikluspark.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tartu Seikluspark</h3>
-                </div>
+                <span class="pealkiri">Tartu Seikluspark</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne"  onclick="openModal('Tähtvere spordipark', 'info')">
+            <button class="filterDiv tasuta 247 aktiivne"  onclick="openModal('Tähtvere spordipark', 'info')">
                 <img src="img/tahtvere.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tähtvere spordipark</h3>
-                </div>
+                <span class="pealkiri">Tähtvere spordipark</span>
             </button>
 
             
