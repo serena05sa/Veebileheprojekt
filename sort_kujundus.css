@@ -23,7 +23,7 @@ nav {
     gap: 1rem;
   }
   
-  a {
+  #riba {
     position: relative;
     cursor: pointer;
     color: #f4f4f4;
@@ -35,7 +35,7 @@ nav {
     transition: color 0.25s, background-color 0.25s;
   }
   
-  a::after {
+  #riba::after {
     position: absolute;
     content: "";
     inset: 0;
@@ -45,7 +45,7 @@ nav {
     border-radius: 8px;
   }
   
-  a:hover {
+  #riba:hover {
     color: #FFF;
     background-color: #3C6E71;
   }
@@ -63,9 +63,9 @@ nav {
     line-height: 45px;
 
     display: flex;
-    flex-wrap: wrap;          /* Luba elementidel liikuda uuele reale */
-    justify-content: center;   /* Horisontaalne keskjoondus */
-    gap: 10px;                 /* Nuppude vahe */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;   
 
   }
   
@@ -166,10 +166,12 @@ nav {
   background-color: #F3E8EE;
   margin: 10% auto;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 80%;
   max-width: 500px;
-  text-align: center;
+  height: 150px;
+  text-align: left;
+  color: #433E0E;
 }
 
 /* Sulgemisnupp */
@@ -188,5 +190,8 @@ nav {
 
 .close-button:hover {
     color: #ead6e0;
+    background-color: #7f4e67;
+    border-radius: 5px;
+
 }
 
