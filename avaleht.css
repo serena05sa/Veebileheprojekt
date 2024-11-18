@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 /*https://vm.tiktok.com/ZNecWNPfy/*/
 nav {
   background-color: #8E9775;
@@ -49,12 +50,27 @@ a:hover::after {
 
 /* Teksti kujundus */
 .text-section {
-  padding-left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
+  align-items: left;
+  gap: 2rem;
 }
+
+.suurem {
+  font-size: 5vW;
+}
+
+.väiksem {
+  font-size: 2vW;
+}
+
+br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
+
 
 /* Tartu tekst */
 /*https://codepen.io/argyleink/pen/MWoeoKV*/
@@ -62,9 +78,8 @@ a:hover::after {
   paint-order: stroke fill markers;
   padding-top: 1px;
   text-transform: uppercase;
-  font-size: calc(1rem + min(60px, 10vw));
-  font-weight: 900;
-  letter-spacing: -.175ch;
+  font-weight: 800;
+  letter-spacing: 0.1ch;
   line-height: 0.9;
   color: white;
   -webkit-text-stroke: 3px black;
@@ -72,40 +87,56 @@ a:hover::after {
   letter-spacing: 0.1ch;
 }
 
-.paint-order > span:first-of-type {
-  font-size: 0.75em;
-}
-
 .paint-order > div {
   display: flex;
   gap: 0.5ch;
 }
 
-/* Tartu pilt */
-.image-section img {
-  position: absolute;
-  height: 50%; /* Väiksem suurus */
-  bottom: -4px;
-  right: -8px;
+
+/* Kursori efekt */
+/* https://youtu.be/UqHILyzcULE?si=dfUZL0VWj44nrmyC */
+.animeeri {
+  font-size: 34px;
+  font-weight: 600;
+  color: #2E2C2F;
+  position: relative;
+  display: inline-block;
 }
 
-section {
-  display: grid;
-  gap: 2vmin;
+/* Blinking cursor */
+.animeeri span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background-color: #3C6E71;
+  margin-left: 2px;
+  animation: blink 0.7s steps(2) infinite;
 }
 
-/* Tekst pealehel */
- .info-section {
-  font-size: 30px;
-  padding-top: 100px;
+
+p {
+  font-size: 1.5rem;        
+  color: #2E2C2F;          
+  font-weight: 600;          
+  line-height: 1.8;          
+  margin-top: 20px;          
   text-align: left;
 }
 
-h2 {
-  font-size: 2rem; /* Väiksem suurus */
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem; /* Väiksem margin */
-  color: #333;
-  letter-spacing: 1.5px;
+
+
+/* Tartu pilt */
+.image-section img {
+  position: relative;
+  top: 3rem;
+  width: 32vw;
+  border-radius: 50%;
+  float: right;
 }
+
+section {
+  min-height: 100vh;
+  padding: 2rem 12% 10rem;
+}
+
