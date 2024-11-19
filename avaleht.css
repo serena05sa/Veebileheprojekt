@@ -56,7 +56,7 @@ a:hover::after {
 .text-section {
   display: flex;
   align-items: flex-start;
-  background-color: #f5f5eb; /* Light beige color */
+  background-color: #F3E8EE;
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -136,12 +136,12 @@ p {
 
 /* Tartu pilt */
 .image-section img {
-    position: absolute; /* Fikseeritud ainult sektsiooni sees */
-    top: 66.5%; /* Keskele sektsiooni kõrguse sees */
-    right: 1%; /* Paremale joondatud */
-    width: 40vw; /* Proportsionaalne laius */
-    transform: translateY(-50%); /* Vertikaalne tsentreerimine */
-    height: auto; /* Säilitab proportsioonid */
+    position: absolute;
+    top: 66.5%;
+    right: 1%;
+    width: 40vw;
+    transform: translateY(-50%);
+    height: auto;
 }
 
 /* Kaart */
