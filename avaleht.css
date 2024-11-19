@@ -1,9 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background-color: #EDEEC0;
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
 
 /*https://vm.tiktok.com/ZNecWNPfy/*/
 nav {
@@ -51,9 +55,15 @@ a:hover::after {
 /* Teksti kujundus */
 .text-section {
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  gap: 2rem;
+  align-items: flex-start;
+  background-color: #f5f5eb; /* Light beige color */
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto;
+  max-width: 75%;
+  height: 28rem;
+  position: relative; /* Keeps elements within the section aligned */
 }
 
 .suurem {
@@ -75,6 +85,7 @@ br {
 /* Tartu tekst */
 /*https://codepen.io/argyleink/pen/MWoeoKV*/
 .paint-order {
+  align-items: flex-start;
   paint-order: stroke fill markers;
   padding-top: 1px;
   text-transform: uppercase;
@@ -103,7 +114,6 @@ br {
   display: inline-block;
 }
 
-/* Blinking cursor */
 .animeeri span::after {
   content: "";
   display: inline-block;
@@ -124,19 +134,104 @@ p {
   text-align: left;
 }
 
-
-
 /* Tartu pilt */
 .image-section img {
-  position: relative;
-  top: 3rem;
-  width: 32vw;
-  border-radius: 50%;
-  float: right;
+    position: absolute; /* Fikseeritud ainult sektsiooni sees */
+    top: 66.5%; /* Keskele sektsiooni kõrguse sees */
+    right: 1%; /* Paremale joondatud */
+    width: 40vw; /* Proportsionaalne laius */
+    transform: translateY(-50%); /* Vertikaalne tsentreerimine */
+    height: auto; /* Säilitab proportsioonid */
 }
 
-section {
-  min-height: 100vh;
-  padding: 2rem 12% 10rem;
+/* Kaart */
+iframe {
+  width: 80%; /* Kaardi laius 80% lehe laiusest */
+  height: 600px; /* Kaardi kõrgus */
+  border: none; /* Eemaldab raami */
+  margin: 0 auto; /* Keskendab horisontaalselt */
+  display: block; /* Tagab, et iframe käitub blokkelemendina */
+  top: 500%;
+}
+
+/* Soovitused sektsioon*/
+.testimonials {
+  background-color: #EDEEC0; /* Sobib lehe üldise taustaga */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ühtlane kastivarju efekt */
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.testimonials-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-box .heading {
+  font-size: 2rem;
+  color: #433E0E; /* Sobib navbari tekstivärviga */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Kolm veergu */
+  gap: 2rem;
+  width: 100%;
+}
+
+.testimonial-item {
+  background-color: #F3E8EE; /* Sama, mis nuppude ja kaardiga */
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px #BACDB0; /* Pehme varju efekt */
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-item:hover {
+  background-color: #ead6e0; /* Helgem toon hover-olekus */
+  transform: scale(1.05); /* Kergelt suurendatud hoveril */
+}
+
+
+/*https://easy-peasy.ai/ai-image-generator/images/handsome-blonde-man-clear-eyes-curly-hair-50-years-old*/
+/*https://living.alot.com/entertainment/the-most-beautiful-person-from-every-country-according-to-ai--19835*/
+/*https://lucidpic.com*/
+.testimonial-item img {
+  width: 8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8E9775; /* Sobib navbari ja filtrinuppude värviga */
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item h2 {
+  font-size: 1.5rem;
+  color: #433E0E; /* Sama värv, mis navbari lingil */
+  margin-bottom: 1rem;
+}
+
+.testimonial-item .rating {
+  margin: 1rem 0;
+}
+
+.testimonial-item .rating i {
+  color: #475B63; /* Kuldne tähtede värv */
+  font-size: 1.2rem;
+}
+
+.testimonial-item p {
+  font-size: 1rem;
+  color: #433E0E;
+  line-height: 1.5;
 }
 
