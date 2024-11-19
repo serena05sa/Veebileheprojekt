@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background-color: #EDEEC0;
   margin: 0;
@@ -49,22 +54,43 @@ a:hover::after {
 
 /* Teksti kujundus */
 .text-section {
-  padding-left: 10px;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
+  background-color: #f5f5eb; /* Light beige color */
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto;
+  max-width: 75%;
+  height: 28rem;
+  position: relative; /* Keeps elements within the section aligned */
 }
+
+.suurem {
+  font-size: 5vW;
+}
+
+.väiksem {
+  font-size: 2vW;
+}
+
+br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
+
 
 /* Tartu tekst */
 /*https://codepen.io/argyleink/pen/MWoeoKV*/
 .paint-order {
+  align-items: flex-start;
   paint-order: stroke fill markers;
   padding-top: 1px;
   text-transform: uppercase;
-  font-size: calc(1rem + min(60px, 10vw));
-  font-weight: 900;
-  letter-spacing: -.175ch;
+  font-weight: 800;
+  letter-spacing: 0.1ch;
   line-height: 0.9;
   color: white;
   -webkit-text-stroke: 3px black;
@@ -72,40 +98,140 @@ a:hover::after {
   letter-spacing: 0.1ch;
 }
 
-.paint-order > span:first-of-type {
-  font-size: 0.75em;
-}
-
 .paint-order > div {
   display: flex;
   gap: 0.5ch;
 }
 
-/* Tartu pilt */
-.image-section img {
-  position: absolute;
-  height: 50%; /* Väiksem suurus */
-  bottom: -4px;
-  right: -8px;
+
+/* Kursori efekt */
+/* https://youtu.be/UqHILyzcULE?si=dfUZL0VWj44nrmyC */
+.animeeri {
+  font-size: 34px;
+  font-weight: 600;
+  color: #2E2C2F;
+  position: relative;
+  display: inline-block;
 }
 
-section {
-  display: grid;
-  gap: 2vmin;
+.animeeri span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background-color: #3C6E71;
+  margin-left: 2px;
+  animation: blink 0.7s steps(2) infinite;
 }
 
-/* Tekst pealehel */
- .info-section {
-  font-size: 30px;
-  padding-top: 100px;
+
+p {
+  font-size: 1.5rem;        
+  color: #2E2C2F;          
+  font-weight: 600;          
+  line-height: 1.8;          
+  margin-top: 20px;          
   text-align: left;
 }
 
-h2 {
-  font-size: 2rem; /* Väiksem suurus */
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem; /* Väiksem margin */
-  color: #333;
-  letter-spacing: 1.5px;
+/* Tartu pilt */
+.image-section img {
+    position: absolute; /* Fikseeritud ainult sektsiooni sees */
+    top: 66.5%; /* Keskele sektsiooni kõrguse sees */
+    right: 1%; /* Paremale joondatud */
+    width: 40vw; /* Proportsionaalne laius */
+    transform: translateY(-50%); /* Vertikaalne tsentreerimine */
+    height: auto; /* Säilitab proportsioonid */
 }
+
+/* Kaart */
+iframe {
+  width: 80%;
+  height: 600px; 
+  border: none;
+  margin: 0 auto;
+  display: block;
+  top: 500%;
+}
+
+/* Soovitused sektsioon*/
+.testimonials {
+  background-color: #EDEEC0; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.testimonials-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-box .heading {
+  font-size: 2rem;
+  color: #433E0E;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Kolm veergu */
+  gap: 2rem;
+  width: 100%;
+}
+
+.testimonial-item {
+  background-color: #F3E8EE;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px #BACDB0;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-item:hover {
+  background-color: #ead6e0; /* Helgem toon hover-olekus */
+  transform: scale(1.05); /* Kergelt suurendatud hoveril */
+}
+
+
+/*https://easy-peasy.ai/ai-image-generator/images/handsome-blonde-man-clear-eyes-curly-hair-50-years-old*/
+/*https://living.alot.com/entertainment/the-most-beautiful-person-from-every-country-according-to-ai--19835*/
+/*githttps://lucidpic.com*/
+.testimonial-item img {
+  width: 8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8E9775;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item h2 {
+  font-size: 1.5rem;
+  color: #433E0E; 
+  margin-bottom: 1rem;
+}
+
+.testimonial-item .rating {
+  margin: 1rem 0;
+}
+
+.testimonial-item .rating i {
+  color: #475B63;
+  font-size: 1.2rem;
+}
+
+.testimonial-item p {
+  font-size: 1rem;
+  color: #433E0E;
+  line-height: 1.5;
+}
+
