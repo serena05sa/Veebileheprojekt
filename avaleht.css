@@ -146,20 +146,20 @@ p {
 
 /* Kaart */
 iframe {
-  width: 80%; /* Kaardi laius 80% lehe laiusest */
-  height: 600px; /* Kaardi kõrgus */
-  border: none; /* Eemaldab raami */
-  margin: 0 auto; /* Keskendab horisontaalselt */
-  display: block; /* Tagab, et iframe käitub blokkelemendina */
+  width: 80%;
+  height: 600px; 
+  border: none;
+  margin: 0 auto;
+  display: block;
   top: 500%;
 }
 
 /* Soovitused sektsioon*/
 .testimonials {
-  background-color: #EDEEC0; /* Sobib lehe üldise taustaga */
+  background-color: #EDEEC0; 
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ühtlane kastivarju efekt */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
   max-width: 1200px;
 }
@@ -173,7 +173,7 @@ iframe {
 
 .testimonials-box .heading {
   font-size: 2rem;
-  color: #433E0E; /* Sobib navbari tekstivärviga */
+  color: #433E0E;
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: bold;
@@ -187,9 +187,9 @@ iframe {
 }
 
 .testimonial-item {
-  background-color: #F3E8EE; /* Sama, mis nuppude ja kaardiga */
+  background-color: #F3E8EE;
   border-radius: 8px;
-  box-shadow: 10px 10px 5px #BACDB0; /* Pehme varju efekt */
+  box-shadow: 10px 10px 5px #BACDB0;
   text-align: center;
   padding: 1.5rem;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -203,20 +203,20 @@ iframe {
 
 /*https://easy-peasy.ai/ai-image-generator/images/handsome-blonde-man-clear-eyes-curly-hair-50-years-old*/
 /*https://living.alot.com/entertainment/the-most-beautiful-person-from-every-country-according-to-ai--19835*/
-/*https://lucidpic.com*/
+/*githttps://lucidpic.com*/
 .testimonial-item img {
   width: 8rem;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #8E9775; /* Sobib navbari ja filtrinuppude värviga */
+  border: 3px solid #8E9775;
   margin-bottom: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-item h2 {
   font-size: 1.5rem;
-  color: #433E0E; /* Sama värv, mis navbari lingil */
+  color: #433E0E; 
   margin-bottom: 1rem;
 }
 
@@ -225,7 +225,7 @@ iframe {
 }
 
 .testimonial-item .rating i {
-  color: #475B63; /* Kuldne tähtede värv */
+  color: #475B63;
   font-size: 1.2rem;
 }
 
