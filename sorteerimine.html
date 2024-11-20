@@ -3,23 +3,22 @@
     <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="sort_kujundus.css">
-    <script src="sorteerimine.js"></script>
         <title>Üritused</title>
     </head>
     <body>
-        <body onload="avane()">
         <!--navigatsiooni riba-->
     
         <nav>
-            <a href="avaleht.html">Avaleht</a>
-            <a href="sorteerimine.html">Sorteerimine</a>
-            <a href="ajalugu.html">Ajalugu</a>
-            <a href="küsimustik.html">Küsimustik</a>
+            <a id="riba" href="avaleht.html">Avaleht</a>
+            <a id="riba" href="sorteerimine.html">Sorteerimine</a>
+            <a id="riba" href="ajalugu.html">Ajalugu</a>
+            <a id="riba" href="küsimustik.html">Küsimustik</a>
         </nav>
         <h1>Ürituste otsing</h1>
 
         
         <!-- Nupud filtreerimiseks -->
+        <!-- kood: https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
         <div id="myBtnContainer">
             <button class="btn active" onclick="filterSelection('koik')">Kõik</button>
             <button class="btn" onclick="filterSelection('tasuta')">Tasuta</button>
@@ -31,152 +30,119 @@
             <button class="btn" onclick="filterSelection('aktiivne')">Aktiivne</button>
         </div>
 
-        
-
-        <div id="openModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-                <h2>Modal Box</h2>
-                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-            </div>
-        </div>
 
         
 
         <!-- Elemendid -->
+        <!-- abiks: https://www.youtube.com/watch?v=yjfjQVawwnA -->
         <div class="card-container">
-            <a id ="nupp" href="#openModal">
-                <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
-                    <img src="img/moku.jpg" alt="sündmus">
-                    <div class="sisu">
-                        <h3 class="pealkiri">Möku bingo</h3>
-                    </div> 
-                </button>
-            </a>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta baarid mangud">
+            <button class="filterDiv tasuta baarid mangud" onclick="openModal('Möku bingo', 'Mis? Bingo. Auhinnaks joogid / baari krediit. Osalemine täiesti tasuta\n Millal? K 18.00\n Kus? Magasini tn 5, 51005 Tartu')">
+                <img src="img/moku.jpg" alt="sündmus">
+                <span class="pealkiri">Möku bingo</span>
+            </button>
+
+            <button class="filterDiv tasuta baarid mangud" onclick="openModal('Püssika maleturniir', 'Mis? Iganädalased male miniturniirid harrastajatele. Osalemine tasuta.\n Millal? T 18.30\n Kus? Lossi 28')">
                 <img src="img/male.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Püssika maleturniir</h3>
-                </div>
+                <span class="pealkiri">Püssika maleturniir</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv kultuur">
+            <button class="filterDiv kultuur" onclick="openModal('Eesti Rahva Muuseum', 'Mis? esti Rahva Muuseum -  Eesti kultuuri ja Eesti ajaloo ning soome-ugri kultuuride muuseum. Pilet alates 10€\n Millal? T-P 10-18\n Kus? Muuseumi tee 2')">
                 <img src="img/erm.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Eesti Rahva Muuseum</h3>
-                </div>
+                <span class="pealkiri">Eesti Rahva Muuseum</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta baarid">
+            <button class="filterDiv tasuta baarid" onclick="openModal('Seik karaoke', 'Mis? Seik baaris toimuvad iga neljapäev karaoke õhtud\n Millal? N 22.00\n Kus? Rüütli 12, teilel korrusel')">
                 <img src="img/seik.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Seik karaoke</h3>
-                </div> 
+                <span class="pealkiri">Seik karaoke</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne">
+            <button class="filterDiv tasuta aktiivne" onclick="openModal('Tantsuõhtud', 'Mis? Tartu Tantsuklubi korraldatavad tantsuõhtud Tiigi seltsimajas elava muusikaga. Üritus on tasuta, kuid annetused on teretulnud\n Millal? K 20.00, üle nädala\n Kus? Tiigi 11')">
                 <img src="img/tants.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tantsuõhtud</h3>
-                </div>
+                <span class="pealkiri">Tantsuõhtud</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta loodus">
+            <button class="filterDiv tasuta loodus" onclick="openModal('Botaanika aed', 'Mis? Baltimaade vanim järjepidevalt tegutsenud botaanikaaed. Pilet kasvuhoonesse alates 3€\n Millal? E-P 7-21\n Kus? Lai tn 38')">
                 <img src="img/botaed.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Botaanika aed</h3>
-                </div>
+                <span class="pealkiri">Botaanika aed</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud">
+            <button class="filterDiv baarid mangud" onclick="openModal('Lucy Loore', 'Mis? Spordibaar, kui võid jookide kõrvale nautida piljardit, dartsi, rallisimulaatorit või pubipokkerit.\n Millal? P-T 18-00; K-N 18-02; R-L 18-04\n Kus? Küüni tn 7')">
                 <img src="img/lucky.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Lucy Loore</h3>
-                </div>
+                <span class="pealkiri">Lucy Loore</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne">
+            <button class="filterDiv tasuta 247 aktiivne" onclick="openModal('Supilinna külakiik', 'Mis? külakiik. pole midagi öelda. mine ja kiigu - see on lõbusam, kui arvad\n Millal? 24/7\n Kus? Kartuli ja Emajõe tn ristis')">
                 <img src="img/kiik.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Supilinna külakiik</h3>
-                </div>
+                <span class="pealkiri">Supilinna külakiik</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne">
+            <button class="filterDiv tasuta 247 aktiivne" onclick="openModal('Emajõe rand', 'Mis? Mõnus rand koos suplemis ja spordi võimalustega\n Millal? 24/7\n Kus? Ujula tn 102')">
                 <img src="img/rand.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Emajõe rand</h3>
-                </div>
+                <span class="pealkiri">Emajõe rand</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv loodus">
+            <button class="filterDiv loodus" onclick="openModal('Tartu loodusmaja', 'Mis? Koolituskeskus ja keskkonnainfo punkt. Pilet alates 2€. Loodusmajal on ka mõnus aed, kus ilusa ilmaga puhata\n Millal? E-R 10-18\n Kus? Lille 10')">
                 <img src="img/loodusmaja.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tartu loodusmaja</h3>
-                </div>
+                <span class="pealkiri">Tartu loodusmaja</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud">
+            <button class="filterDiv baarid mangud"  onclick="openModal('O´Learys', 'Mis? Ameerika stiilis meelelahutuskeskus, kus on palju erinevaid tegevusi näiteks bowling, piljard ja darts.\n Millal? E-K 12-21; T 12-22; R-L 12-23; P 12-19\n Kus? Kalda tee 1C')">
                 <img src="img/olearys.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">O'Learys</h3>
-                </div>
+                <span class="pealkiri">O'Learys</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv baarid mangud">
+            <button class="filterDiv baarid mangud"  onclick="openModal('Baribal', 'Mis? Mõnusa atmosfääriga piljardisaal Tartus. Hinnad: 14-18 4,5€/h, edasi 6,5€/h\n Millal? P-T 14-00; K-L 14-02\n Kus? Riia 4')">
                 <img src="img/baribal.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Baribal</h3>
-                </div>
+                <span class="pealkiri">Baribal</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta loodus">
+            <button class="filterDiv tasuta loodus"  onclick="openModal('Toomemäe park', 'Mis? Toomemäel paiknevad Tartu Toomkiriku varemed ja Tartu tähetorn. Lisaks sellele on tegemist väga ilusa kohaga, kus niisama aega veeta.\n Millal? 24/7\n Kus? Toomemägi')">
                 <img src="img/toomemagi.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Toomemäe park</h3>
-                </div>
+                <span class="pealkiri">Toomemäe park</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta paarid">
+            <button class="filterDiv tasuta paarid"  onclick="openModal('Emajõe promenaad', 'Mis? Soojade ilmadega on Emajõe äärne promenaad nii kohalike tartlaste kui külaliste üks meelispaiku. Sealt leiab kohvikuid, baare ja restosid läbisegi mõnusa melu, hõrkude toidulõhnade ja muusikaga.\n Millal? 24/7\n Kus? Vabaduse pst 1c')">
                 <img src="img/promenaad.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Emajõe promenaad</h3>
-                </div>
+                <span class="pealkiri">Emajõe promenaad</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne">
+            <button class="filterDiv tasuta aktiivne"  onclick="openModal('Raekoja uisuplats', 'Mis? Talvel võib suudlevate tudengite purskaevu ümbert leida uisuväljaku, mille juurest on võimalik ka  5€ eest uiske laenutada\n Millal? talvel 10-22 (eelmise aasta info)\n Kus? Raekoja plats 1a')">
                 <img src="img/raekoda.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Raekoja uisuplats</h3>
-                </div>
+                <span class="pealkiri">Raekoja uisuplats</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta aktiivne">
+            <button class="filterDiv tasuta aktiivne"  onclick="openModal('Tamme staadioni uisuväljak', 'Mis? Uisuplats, kohapeal võimalik laenutada uiske hinnaga 3€/h\n Millal? 24/7\n Kus? Kungla tn 2e')">
                 <img src="img/tammeuisuvaljak.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tamme staadioni uisuväljak</h3>
-                </div>
+                <span class="pealkiri">Tamme staadioni uisuväljak</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv aktiivne">
+            <button class="filterDiv aktiivne"  onclick="openModal('Tartu Seikluspark', 'Mis? Seikluspargis leidub palju erinevaid tegevusi ning eri tasemetele mõeldus seiklusradasid. Olenevalt rajast u 16€/inimene\n Millal? 11-19\n Kus? Narva maantee 126B')">
                 <img src="img/seikluspark.jpg" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tartu Seikluspark</h3>
-                </div>
+                <span class="pealkiri">Tartu Seikluspark</span>
             </button>
 
-            <button id= "urituse_nupp" class="filterDiv tasuta 247 aktiivne">
+            <button class="filterDiv tasuta 247 aktiivne"  onclick="openModal('Tähtvere spordipark', 'Mis? Suvisel ajal on spordipargis võimalik kasutada rulli-, jooksu- ja sprindirada, disc golfi park ja BMX jalgrattakrossi rada. Talvel on olemas ka suusarajad ning uisuplats laululava all.\n Millal? avatud 24/7, valgustus E-P 16.30-23.00\n Kus? Herne tn 67')">
                 <img src="img/tahtvere.png" alt="sündmus">
-                <div class="sisu">
-                    <h3 class="pealkiri">Tähtvere spordipark</h3>
-                </div>
+                <span class="pealkiri">Tähtvere spordipark</span>
             </button>
 
             
         </div>
         <!--elementide lõpp-->
+
+        <!-- Modal HTML -->
+        <div id="eventModal" style="display: none;">
+            <div id="modalContent">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <button class= "close-button" onclick="closeModal()">X</button>
+            </div>
+
+        </div>
+
+        <!-- Laadige JavaScript lehe lõpus -->
+        <script src="sorteerimine.js"></script>
 
 
     </body>

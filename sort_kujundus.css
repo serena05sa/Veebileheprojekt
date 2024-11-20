@@ -1,11 +1,19 @@
+/*taust*/
 body {
     background-color: #EDEEC0;
     margin: 0;
     font-family: Arial, sans-serif;
   }
 
-  /*nav bar*/
-  nav {
+h1 {
+    color: #433E0E;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+
+/*nav bar*/
+nav {
     background-color: #8E9775;
     padding: 1rem;
     border-radius: 10px;
@@ -15,7 +23,7 @@ body {
     gap: 1rem;
   }
   
-  a {
+  #riba {
     position: relative;
     cursor: pointer;
     color: #f4f4f4;
@@ -27,7 +35,7 @@ body {
     transition: color 0.25s, background-color 0.25s;
   }
   
-  a::after {
+  #riba::after {
     position: absolute;
     content: "";
     inset: 0;
@@ -37,55 +45,28 @@ body {
     border-radius: 8px;
   }
   
-  a:hover {
+  #riba:hover {
     color: #FFF;
     background-color: #3C6E71;
   }
+
   
-  
-  
-  h1 {
-    color: #433E0E;
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  
-  /*sorteerimise kujundus*/
-  
-    /*konteiner, kus sees kõik elemendid*/
-  .card-container {
-    overflow: hidden;
-    display:flex;
-    justify-content: center;
+      /*sorteerimise alamlehe kujundus*/
+
+
+/*filtreerimine*/
+
+   /*see, kus filtri nupud sees*/
+   #myBtnContainer{
+    background-color: #8E9775;
+    padding: 5px;
+    line-height: 45px;
+
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
-  }
-  
-    /*filtreeritavad elemendid, vist*/
-  .filterDiv {
-    width: 200px;
-    line-height: 5px;
-    display: none; /* by default ei ole üritust näha */
-    
-  }
-  
-  /*pildid*/
-  img{
-    width: 200px;
-    height: 100px;
-  }
-  
-    /*pealkirjad eventide all*/
-  .pealkiri{
-    color: #433E0E;
-    padding: 0px;
-    text-align: center;
-  }
-  
-  /* midagimidagi filtreerimine */
-  .show {
-    display: block;
+    justify-content: center;
+    gap: 10px;   
+
   }
   
   /* filtreerimis nuppude disain */
@@ -98,7 +79,7 @@ body {
     border-radius: 4px;
   }
   
-  /* kui hoverid nupu kohal */
+  /* kui hoverid filtreerimis nupu kohal */
   .btn:hover {
     background-color: #ead6e0;
   }
@@ -108,29 +89,109 @@ body {
     background-color: #475B63;
     color: white;
   }
-  
-  #myBtnContainer{
-    background-color: #8E9775;
-    padding: 5px;
-    line-height: 45px;
-  
+
+
+/*üritused*/
+
+/*see, kus nad kõik sees ilusti*/
+  .card-container {
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
   }
   
-  #urituse_nupp{
+  /*filtreeritavad elemendid*/
+  /*inspiratsioon: https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
+  .filterDiv {
+    line-height: 5px;
+    display: none; /* by default ei ole üritust näha */
     width: 220px;
-    padding: 10px;
-    margin: 10px;
+    margin: 10px; /*et nuppudel oleks vahe*/
     border: none;
     background-color: #F3E8EE;
     box-shadow: 10px 10px 5px #BACDB0;
     border-radius: 8px;
   }
-  
-  #urituse_nupp:hover{
+
+  .filterDiv:hover{
     background-color: #ead6e0;
     transform: scale(1.15);
-  
-    
+  }
+
+  /* midagimidagi filtreerimine */
+  .show {
+    display: block;
   }
   
+  /*pildid*/
+  img{
+    width: 200px;
+    height: 100px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+  }
   
+  /*pealkirjad eventide all*/
+  .pealkiri{
+    color: #433E0E;
+    padding: 0px;
+    text-align: center; 
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+
+  
+ 
+  
+  /* Modal stiilid */
+#eventModal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Taustahägu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalContent {
+  position: relative;
+  background-color: #F3E8EE;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  height: 150px;
+  text-align: left;
+  color: #433E0E;
+}
+
+/* Sulgemisnupp */
+.close-button {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: #7f4e67;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close-button:hover {
+    color: #ead6e0;
+    background-color: #7f4e67;
+    border-radius: 5px;
+
+}
+
