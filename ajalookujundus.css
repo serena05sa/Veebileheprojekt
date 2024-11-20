@@ -51,7 +51,6 @@ body {
     text-align: center;
     margin-top: 2rem;
   }
-  
   .container {
     display: flex;
     align-items: stretch; 
@@ -59,25 +58,55 @@ body {
     max-width: 1200px;
     margin: 20px auto;
   }
-  
+  .teine-container {
+    display: flex;
+    background-color: white;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
   .image-container {
     flex: 1;
     max-width: 50%;
     overflow: hidden;
+    
   }
     .image-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
-        filter: hue-rotate(10deg) grayscale(20%);
+        animation: filterchange 15s linear infinite alternate !important;
+
+    }
+    @keyframes filterchange {
+      0% {filter: grayscale(0%);}
+      50% {filter: grayscale(50%);}
+      100% {filter: grayscale(100%);}
     }
     .text-container {
         flex: 2; 
         text-align: justify;
-        padding: 20px;
-        border: 1px solid rgb(0, 0, 0);
+        padding: 10px;
+        border: 1px solid rgb(75, 135, 94);
     }
+    .scndtext-container {
+      flex: 3; 
+      text-align: justify;
+      padding: 5px;
+      border: 3px solid rgb(46, 44, 47);
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+  }
+  .thrdtext-container {
+    flex: 3; 
+      text-align: justify;
+      padding: 5px;
+      border: 3px solid rgb(46, 44, 47);
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 16px;
+  }
     .speech-bubble {
       position: static;
       background: #bacdb0;
@@ -89,6 +118,32 @@ body {
       border: 2px solid #f4f4f4;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
+      animation: fadeIN 3s ease-in-out !important;
    
     }
-  
+    @keyframes fadeIN {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+      0% {animation-delay: 4s;}
+    }
+    .teise_pildi-container {
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+      align-items: center;
+      gap: 30px;
+    }
+      .teise_pildi-container img {
+          width: 100%;
+          flex: 1;
+          height: 100%;
+          object-fit: cover;
+          filter: hue-rotate(10deg);
+      }
+    
+      .image-container img:hover,
+      .teise_pildi-container img:hover {
+      transform: scale(1.1);
+      transition: transform 0.8s ease-in-out;
+      }
+
