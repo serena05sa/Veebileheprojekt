@@ -78,7 +78,7 @@ body {
         animation: filterchange 15s linear infinite alternate !important;
 
     }
-    @keyframes filterchange {
+    @keyframes filterchange { /*Selle osa jaooks kasutatud CHATGPT abi*/
       0% {filter: grayscale(0%);}
       50% {filter: grayscale(50%);}
       100% {filter: grayscale(100%);}
@@ -93,7 +93,7 @@ body {
       flex: 3; 
       text-align: justify;
       padding: 5px;
-      border: 3px solid rgb(46, 44, 47);
+      border: 1px solid rgb(75, 135, 94);
       padding-left: 20px;
       padding-right: 20px;
       font-size: 15px;
@@ -102,10 +102,10 @@ body {
     flex: 3; 
       text-align: justify;
       padding: 5px;
-      border: 3px solid rgb(46, 44, 47);
+      border: 1px solid rgb(75, 135, 94);
       padding-left: 20px;
       padding-right: 20px;
-      font-size: 16px;
+      font-size: 15px;
   }
     .speech-bubble {
       position: static;
@@ -121,7 +121,7 @@ body {
       animation: fadeIN 3s ease-in-out !important;
    
     }
-    @keyframes fadeIN {
+    @keyframes fadeIN { /*Selle osa jaooks kasutatud CHATGPT abi*/
       0% { opacity: 0; transform: translateY(-10px); }
       100% { opacity: 1; transform: translateY(0); }
       0% {animation-delay: 4s;}
@@ -140,8 +140,37 @@ body {
           object-fit: cover;
           filter: hue-rotate(10deg);
       }
+      .link-container {
+        display: flex;
+        align-items: center; 
+        background-color: #2E2C2F;
+        max-width: 100%;
+        margin: 5px auto;
+        gap: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .link-bubble {
+        justify-content: center;
+        width: 100%;
+        height: 35px;
+        padding: 8px;
+        color: #433E0E;
+        text-decoration: none;
+        display: flex;
+        margin: 10px;
+        
+      }
+      .link-text {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        color: #ffffff; 
+      }
+      
     
-      .image-container img:hover,
+      .image-container img:hover, /*Selle osa jaooks kasutatud CHATGPT abi*/
       .teise_pildi-container img:hover {
       transform: scale(1.1);
       transition: transform 0.8s ease-in-out;
