@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/*https://vm.tiktok.com/ZNecWNPfy/*/
+/* https://vm.tiktok.com/ZNecWNPfy/ */
 nav {
   background-color: #8E9775;
   padding: 1rem;
@@ -53,7 +53,7 @@ a:hover::after {
 }
 
 /* Teksti kujundus */
-.text-section {
+.teksti-sektsioon {
   display: flex;
   align-items: flex-start;
   background-color: #F3E8EE;
@@ -63,7 +63,7 @@ a:hover::after {
   margin: 1.5rem auto;
   max-width: 75%;
   height: 28rem;
-  position: relative; /* Keeps elements within the section aligned */
+  position: relative;
 }
 
 .suurem {
@@ -83,8 +83,9 @@ br {
 
 
 /* Tartu tekst */
-/*https://codepen.io/argyleink/pen/MWoeoKV*/
-.paint-order {
+/* https://codepen.io/argyleink/pen/MWoeoKV */
+/* Kasutasin CHATGPT-d, et paluda tal koodi siluda ja küsida, kuidas teha kindlaid efekte, mis ma soovisin, et oleksid olemas */
+.äge-tekst {
   align-items: flex-start;
   paint-order: stroke fill markers;
   padding-top: 1px;
@@ -98,7 +99,7 @@ br {
   letter-spacing: 0.1ch;
 }
 
-.paint-order > div {
+.äge-tekst > div {
   display: flex;
   gap: 0.5ch;
 }
@@ -135,14 +136,16 @@ p {
 }
 
 /* Tartu pilt */
-.image-section img {
-    position: absolute;
-    top: 66.5%;
-    right: 1%;
-    width: 40vw;
-    transform: translateY(-50%);
-    height: auto;
+.pildi-sektsioon img {
+  position: absolute;
+  bottom: 0;
+  right: 1%;
+  width: 60%;
+  max-width: 700px;
+  height: auto;
+  transform: translateY(7%);
 }
+
 
 /* Kaart */
 iframe {
@@ -155,7 +158,8 @@ iframe {
 }
 
 /* Soovitused sektsioon*/
-.testimonials {
+/* Ruudu disaini ideed võtsin "sort_kujundus.css" üle. */
+.soovitajad {
   background-color: #EDEEC0; 
   padding: 2rem;
   border-radius: 10px;
@@ -164,14 +168,14 @@ iframe {
   max-width: 1200px;
 }
 
-.testimonials-box {
+.soovitajad-ruut {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.testimonials-box .heading {
+.soovitajad-ruut .heading {
   font-size: 2rem;
   color: #433E0E;
   margin-bottom: 1.5rem;
@@ -179,14 +183,14 @@ iframe {
   font-weight: bold;
 }
 
-.wrapper {
+.tulbad {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Kolm veergu */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
 }
 
-.testimonial-item {
+.soovitaja {
   background-color: #F3E8EE;
   border-radius: 8px;
   box-shadow: 10px 10px 5px #BACDB0;
@@ -195,16 +199,16 @@ iframe {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.testimonial-item:hover {
-  background-color: #ead6e0; /* Helgem toon hover-olekus */
-  transform: scale(1.05); /* Kergelt suurendatud hoveril */
+.soovitaja:hover {
+  background-color: #ead6e0;
+  transform: scale(1.05);
 }
 
 
-/*https://easy-peasy.ai/ai-image-generator/images/handsome-blonde-man-clear-eyes-curly-hair-50-years-old*/
-/*https://living.alot.com/entertainment/the-most-beautiful-person-from-every-country-according-to-ai--19835*/
-/*githttps://lucidpic.com*/
-.testimonial-item img {
+/* https://easy-peasy.ai/ai-image-generator/images/handsome-blonde-man-clear-eyes-curly-hair-50-years-old */
+/* https://living.alot.com/entertainment/the-most-beautiful-person-from-every-country-according-to-ai--19835 */
+/* https://lucidpic.com */
+.soovitaja img {
   width: 8rem;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -214,22 +218,22 @@ iframe {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-item h2 {
+.soovitaja h2 {
   font-size: 1.5rem;
   color: #433E0E; 
   margin-bottom: 1rem;
 }
 
-.testimonial-item .rating {
+.soovitaja .rating {
   margin: 1rem 0;
 }
 
-.testimonial-item .rating i {
+.soovitaja .rating i {
   color: #475B63;
   font-size: 1.2rem;
 }
 
-.testimonial-item p {
+.soovitaja p {
   font-size: 1rem;
   color: #433E0E;
   line-height: 1.5;
