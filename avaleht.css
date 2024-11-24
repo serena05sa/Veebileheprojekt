@@ -104,6 +104,25 @@ br {
   gap: 0.5ch;
 }
 
+/* Tekstiga valge ristkülik */
+.tekst-ristkülik {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.tekst-kast {
+  text-align: center;
+  color: #2E2C2F;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
 
 /* Kursori efekt */
 /* https://youtu.be/UqHILyzcULE?si=dfUZL0VWj44nrmyC */
