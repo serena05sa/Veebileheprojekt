@@ -1,3 +1,4 @@
+// Küsisin abi ChatGPT käest
 document.addEventListener("DOMContentLoaded", function () {
     const phrases = [
         "rahvaarvult Eesti teine linn",
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const colors = [
-        "#729B79",  // Color for first phrase   // Color for fourth phrase
+        "#729B79", 
     ];
 
     let currentPhraseIndex = 0;

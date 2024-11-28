@@ -66,14 +66,6 @@ a:hover::after {
   position: relative;
 }
 
-.suurem {
-  font-size: 5vW;
-}
-
-.väiksem {
-  font-size: 2vW;
-}
-
 br {
   content: "";
   margin: 2em;
@@ -81,28 +73,6 @@ br {
   font-size: 24%;
 }
 
-
-/* Tartu tekst */
-/* https://codepen.io/argyleink/pen/MWoeoKV */
-/* Kasutasin CHATGPT-d, et paluda tal koodi siluda ja küsida, kuidas teha kindlaid efekte, mis ma soovisin, et oleksid olemas */
-.äge-tekst {
-  align-items: flex-start;
-  paint-order: stroke fill;
-  padding-top: 1px;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.1ch;
-  line-height: 0.9;
-  color: white;
-  -webkit-text-stroke: 3px black;
-  text-shadow: 5px 5px black;
-  letter-spacing: 0.1ch;
-}
-
-.äge-tekst > div {
-  display: flex;
-  gap: 0.5ch;
-}
 
 /* Tekstiga valge ristkülik */
 .tekst-ristkülik {
@@ -163,6 +133,19 @@ p {
   max-width: 700px;
   height: auto;
   transform: translateY(7%);
+}
+
+.pildi-sektsioon-2 img {
+  position: absolute;
+  bottom: 70%;
+  left: 11%;
+  max-width: 38%;
+  height: auto;
+}
+
+.pildi-sektsioon-2 > div {
+  display: flex;
+  gap: 0.5ch;
 }
 
 
