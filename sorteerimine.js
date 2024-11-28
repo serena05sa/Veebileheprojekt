@@ -7,18 +7,17 @@ function filterSelection(c) {
   "use strict";
   var x, i;
   x = document.getElementsByClassName("filterDiv");
-  if (c === "koik") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  if (c === "koik") c = ""; //kui valitakse kõik, tühistatakse filter
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
+    w3RemoveClass(x[i], "show"); //eemaldab klassi show
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
+  }//lisab klassi show, kui valitakse filter
 }
-
+//alguses kuvatakse kõik
 filterSelection("koik")
 
 
-// Show filtered elements
+// haldab klasside lisamist/eemaldamist
 function w3AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -29,8 +28,6 @@ function w3AddClass(element, name) {
     }
   }
 }
-
-// Hide elements that are not selected
 function w3RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -43,7 +40,7 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current control button (highlight it)
+// klass active eemaldatakse eelmiselt nupult ning lisatakse praegusele
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -54,6 +51,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+// kasutatud ChatGPT abi. "Palun kirjuta js kood, mis avaks akna ning kuvaks infot vastava sündmuse kohta"
 // popup akna avamine
 function openModal(title, description) {
   const eventModal = document.getElementById("eventModal");

@@ -6,13 +6,12 @@
         <title>Üritused</title>
     </head>
     <body>
+
         <!--navigatsiooni riba-->
-    
         <nav>
             <a id="riba" href="avaleht.html">Avaleht</a>
             <a id="riba" href="sorteerimine.html">Sorteerimine</a>
             <a id="riba" href="ajalugu.html">Ajalugu</a>
-            <a id="riba" href="küsimustik.html">Küsimustik</a>
         </nav>
         <h1>Ürituste otsing</h1>
 
@@ -29,9 +28,6 @@
             <button class="btn" onclick="filterSelection('247')">24/7</button>
             <button class="btn" onclick="filterSelection('aktiivne')">Aktiivne</button>
         </div>
-
-
-        
 
         <!-- Elemendid -->
         <!-- abiks: https://www.youtube.com/watch?v=yjfjQVawwnA -->
@@ -126,12 +122,11 @@
                 <img src="img/tahtvere.png" alt="sündmus">
                 <span class="pealkiri">Tähtvere spordipark</span>
             </button>
-
-            
         </div>
         <!--elementide lõpp-->
 
-        <!-- Modal HTML -->
+        <!-- kasutatud ChatGPT abi. "Palun kirjuta js kood, mis avaks akna ning kuvaks infot vastava sündmuse kohta"-->
+        <!-- popup aken -->
         <div id="eventModal" style="display: none;">
             <div id="modalContent">
                 <h2 id="modalTitle"></h2>
@@ -141,7 +136,7 @@
 
         </div>
 
-        <!-- Laadige JavaScript lehe lõpus -->
+        <!-- JavaScripti laadimine -->
         <script src="sorteerimine.js"></script>
 
 
