@@ -229,6 +229,9 @@ iframe {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.heading {
+  text-align: center;
+}
 .soovitaja h2 {
   font-size: 1.5rem;
   color: #433E0E; 
