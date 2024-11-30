@@ -55,13 +55,15 @@ a:hover::after {
 /* Teksti kujundus */
 .teksti-sektsioon {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: #F3E8EE;
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 1.5rem auto;
-  max-width: 75%;
+  max-width: 80%;
   height: 28rem;
   position: relative;
 }
