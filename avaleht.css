@@ -139,7 +139,7 @@ p {
 
 .pildi-sektsioon-2 img {
   position: absolute;
-  bottom: 70%;
+  top: 15%;
   left: 11%;
   max-width: 38%;
   height: auto;
