@@ -5,19 +5,15 @@ body {
 }
 
 /* Navbar Styles */
+/* https://vm.tiktok.com/ZNecWNPfy/ */
 nav {
   background-color: #8E9775;
-  padding: 2rem; /* Increase padding to make the nav bar taller */
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  gap: 3rem; /* Increase gap to add more space between items */
-  position: fixed; /* Keep the navbar fixed at the top of the page */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10; /* Ensure navbar is above other content */
+  gap: 1rem;
 }
 
 /* Link styles in Navbar */
@@ -25,11 +21,11 @@ a {
   position: relative;
   cursor: pointer;
   color: #f4f4f4;
-  font-size: 32px; /* Increase font size for larger text */
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  padding: 1.5rem 2rem; /* Increase padding for a larger clickable area */
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   transition: color 0.25s, background-color 0.25s;
 }
 
@@ -38,10 +34,10 @@ a::after {
   content: "";
   inset: 0;
   background-color: #3C6E71;
-  scale: 1 0;
+  transform: scale(1, 0);
   z-index: -1;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 a:hover {
@@ -50,14 +46,16 @@ a:hover {
 }
 
 a:hover::after {
-  scale: 1 1;
+  transform: scale(1, 1);
 }
+
 
 h1 {
   color: #433E0E;
   text-align: center;
   margin-top: 2rem;
 }
+
 
 .container {
   display: flex;
@@ -98,156 +96,3 @@ h1 {
     text-align: center;
  
   }
-
-
-
-
-/*sorteerimise kujundus*/
-
-  /*konteiner, kus sees kõik elemendid*/
-.card-container {
-  overflow: hidden;
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-  /*filtreeritavad elemendid, vist*/
-.filterDiv {
-  float: top;
-  width: 200px;
-  line-height: 5px;
-  text-align: top;
-  display: none; /* by default ei ole üritust näha */
-  
-}
-
-/*pildid*/
-img{
-  width: 200px;
-  height: 100px;
-}
-
-  /*pealkirjad eventide all*/
-.pealkiri{
-  color: #433E0E;
-  padding: 0px;
-  size: 5px;
-  text-align: center;
-}
-
-/* midagimidagi filtreerimine */
-.show {
-  display: block;
-}
-
-/* filtreerimis nuppude disain */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #F3E8EE;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-/* kui hoverid nupu kohal */
-.btn:hover {
-  background-color: #ead6e0;
-}
-
-/* vajutamisel nupp tumedam */
-.btn:active {
-  background-color: #475B63;
-  color: white;
-}
-
-#myBtnContainer{
-  background-color: #8E9775;
-  padding: 5px;
-  line-height: 45px;
-
-}
-
-#urituse_nupp{
-  width: 220px;
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  background-color: #F3E8EE;
-  box-shadow: 10px 10px 5px #BACDB0;
-  border-radius: 8px;
-}
-
-#urituse_nupp:hover{
-  background-color: #ead6e0;
-  transform: scale(1.15);
-
-  
-}
-
-/* Text Section Styling */
-.text-section {
-  padding-left: 20px; /* Ensure some padding from the left edge */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  margin-top: 100px; /* Add top margin to avoid overlapping the navbar */
-}
-
-.paint-order {
-  paint-order: stroke fill;
-  text-transform: uppercase;
-  font-size: calc(1rem + min(90px, 15vw));
-  font-weight: 900;
-  letter-spacing: -.175ch;
-  line-height: 0.9;
-  color: white;
-  -webkit-text-stroke: 5px black;
-  text-shadow: 8px 8px black;
-}
-
-.paint-order > span:first-of-type {
-  font-size: .75em;
-}
-
-.paint-order > div {
-  display: flex;
-  gap: .5ch;
-}
-
-/* Image Section Styling */
-.image-section img {
-  position: absolute;
-  height: 60%;
-  bottom: -4px;
-  right: -8px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html {
-  block-size: 100%;
-}
-
-body {
-  min-block-size: 100%;
-  font-family: system-ui, sans-serif;
-}
-
-section {
-  display: grid;
-  place-items: center;
-  gap: 2vmin;
-}
-
-section > p {
-  border: 2px solid #aaa;
-  border-radius: 1e3px;
-  padding-inline: 1.5ch;
-  line-height: 1.75;
-}
